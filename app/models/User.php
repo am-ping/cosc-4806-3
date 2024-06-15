@@ -96,10 +96,10 @@ class User {
 
     $diff = abs($timestamp2 - $timestamp1);
 
-    if (false && (!$_SESSION['failedAuth'] < 3 && $diff <= 60)) {
-        return true;
+    if (!isset($_SESSION["failed_login"])) {
+      $_SESSION["failed_login"] = 1;
     } else {
-        return false;
+      $_SESSION["failed_login"] += 1;
     }
       
   }

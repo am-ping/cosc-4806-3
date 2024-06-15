@@ -33,7 +33,7 @@
 		<?php
 		if (isset($_SESSION["failed_login"])) {
 			echo '<p class="text-center text-danger">';
-			echo $_SESSION["failed_login"];
+			echo "Fail attempt number: " . $_SESSION["failed_login"];
 			echo '</p>';
 		}
 		?>
